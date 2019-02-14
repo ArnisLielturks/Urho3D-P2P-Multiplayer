@@ -11,6 +11,10 @@ Project requires the following services to be set up first:
 * NAT punchtrough master server - https://github.com/ArnisLielturks/Urho3D-NAT-server
 * Master server - https://github.com/ArnisLielturks/Master-server
 
+Both of those servers are available here:
+NAT punchtrough master server: nat.frameskippers.com on port 30123 
+Master server: http://master.frameskippers.com
+
 
 ### Lobby
 ![alt tag](https://github.com/ArnisLielturks/Urho3D-P2P-Multiplayer/blob/master/Screenshots/Screenshot_Thu_Feb_14_15_08_06_2019.png)
