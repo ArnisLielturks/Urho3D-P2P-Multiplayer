@@ -12,8 +12,8 @@ Project requires the following services to be set up first:
 * Master server - https://github.com/ArnisLielturks/Master-server
 
 Both of those servers are available here:
-NAT punchtrough master server: nat.frameskippers.com on port 30123 
-Master server: http://master.frameskippers.com
+* NAT punchtrough master server: nat.frameskippers.com on port 30123 
+* Master server: http://master.frameskippers.com
 
 
 ### Lobby
