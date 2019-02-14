@@ -13,7 +13,7 @@ Project requires the following services to be set up first:
 
 
 ### Lobby
-![alt tag](https://github.com/ArnisLielturks/Urho3D-NAT-server/blob/master/Screenshots/Screenshot_Thu_Feb_14_15_08_06_2019.png)
+![alt tag](https://github.com/ArnisLielturks/Urho3D-P2P-Multiplayer/blob/master/Screenshots/Screenshot_Thu_Feb_14_15_08_06_2019.png)
 
 ### In-game
-![alt tag](https://github.com/ArnisLielturks/Urho3D-NAT-server/blob/master/Screenshots/Screenshot_Thu_Feb_14_15_08_22_2019.png)
+![alt tag](https://github.com/ArnisLielturks/Urho3D-P2P-Multiplayer/blob/master/Screenshots/Screenshot_Thu_Feb_14_15_08_22_2019.png)
