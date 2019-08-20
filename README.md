@@ -1,3 +1,6 @@
+[![CircleCI](https://circleci.com/gh/ArnisLielturks/Urho3D-P2P-Multiplayer.svg?style=svg)](https://circleci.com/gh/ArnisLielturks/Urho3D-P2P-Multiplayer)
+
+
 # Urho3D-P2P-Multiplayer
 
 # !NOTE 
