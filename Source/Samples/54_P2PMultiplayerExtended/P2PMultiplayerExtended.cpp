@@ -227,37 +227,39 @@ void P2PMultiplayer::HandleUpdate(StringHash eventType, VariantMap& eventData)
     static float gametime;
     gametime += timestep * 10;
 
-    if (input->GetKeyPress(KEY_R)) {
-        GetSubsystem<Network>()->ResetHost();
-    }
-    if (input->GetKeyPress(KEY_TAB)) {
-        playerList_->SetVisible(!playerList_->IsVisible());
-    }
-    if (input->GetKeyPress(KEY_E)) {
-        GetSubsystem<Network>()->Disconnect(1000);
-        httpRequest_ = GetSubsystem<Network>()->MakeHttpRequest(API_REMOVE_SESSION + "?guid=" + GetSubsystem<Network>()->GetGUID());
-        peers_.Clear();
+    if (GetSubsystem<UI>()->GetFocusElement() == nullptr) {
+        if (input->GetKeyPress(KEY_R)) {
+            GetSubsystem<Network>()->ResetHost();
+        }
+        if (input->GetKeyPress(KEY_TAB)) {
+            playerList_->SetVisible(!playerList_->IsVisible());
+        }
+        if (input->GetKeyPress(KEY_E) && GetSubsystem<Network>()->GetServerConnection()) {
+            GetSubsystem<Network>()->Disconnect(1000);
+            httpRequest_ = GetSubsystem<Network>()->MakeHttpRequest(API_REMOVE_SESSION + "?guid=" + GetSubsystem<Network>()->GetGUID());
+            peers_.Clear();
 
-        GetSubsystem<Input>()->SetMouseVisible(true);
-        GetSubsystem<Input>()->SetMouseGrabbed(false);
-        GetSubsystem<Input>()->SetMouseMode(MouseMode::MM_FREE);
+            GetSubsystem<Input>()->SetMouseVisible(true);
+            GetSubsystem<Input>()->SetMouseGrabbed(false);
+            GetSubsystem<Input>()->SetMouseMode(MouseMode::MM_FREE);
 
-        SetStatusMessage("Disconnected");
+            SetStatusMessage("Disconnected");
 
-        UpdatePlayerList();
+            UpdatePlayerList();
 
-        gameState_ = IN_MENU;
-    }
+            gameState_ = IN_MENU;
+        }
 
-    if (input->GetKeyPress(KEY_H)) {
-        if (input->IsMouseVisible()) {
-            input->SetMouseVisible(false);
-            input->SetMouseGrabbed(true);
-            input->SetMouseMode(MouseMode::MM_WRAP);
-        } else {
-            input->SetMouseVisible(true);
-            input->SetMouseGrabbed(false);
-            input->SetMouseMode(MouseMode::MM_FREE);
+        if (input->GetKeyPress(KEY_H)) {
+            if (input->IsMouseVisible()) {
+                input->SetMouseVisible(false);
+                input->SetMouseGrabbed(true);
+                input->SetMouseMode(MouseMode::MM_WRAP);
+            } else {
+                input->SetMouseVisible(true);
+                input->SetMouseGrabbed(false);
+                input->SetMouseMode(MouseMode::MM_FREE);
+            }
         }
     }
 
