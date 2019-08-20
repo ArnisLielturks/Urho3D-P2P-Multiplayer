@@ -9,8 +9,9 @@ RUN apt-get update \
 
 # Clone the Urho repo and remove all the samples
 RUN git clone https://github.com/urho3d/Urho3D.git /Urho3D && \
+    cd Urho3D && \
     git checkout p2p-multiplayer && \
-	cd /Urho3D/Source/Samples && \
+	cd Source/Samples && \
 	# Remove all samples
 	ls -la | awk '{print $9}' | grep _ | xargs rm -r
 
