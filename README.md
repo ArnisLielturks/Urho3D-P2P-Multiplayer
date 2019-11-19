@@ -18,6 +18,8 @@ Project requires the following services to be set up first:
 * NAT punchtrough master server - https://github.com/ArnisLielturks/Urho3D-NAT-server
 * Master server - https://github.com/ArnisLielturks/Master-server
 
+You can bring up the services with the help of terraform, see instructions here: https://github.com/ArnisLielturks/Urho3D-P2P-Multiplayer-Services
+
 Both of those servers are available here:
 * NAT punchtrough master server: nat.frameskippers.com on port 30123 
 * Master server: http://master.frameskippers.com
