@@ -71,6 +71,8 @@ URHO3D_DEFINE_APPLICATION_MAIN(P2PMultiplayer)
 static String API_SEARCH_SESSION = "http://master.frameskippers.com/open";
 static String API_NEW_SESSION = "http://master.frameskippers.com/new";
 static String API_REMOVE_SESSION = "http://master.frameskippers.com/delete";
+static String NAT_PUNCHTROUGH_SERVER = "nat.frameskippers.com";
+static int NAT_PUNCHTROUGH_SERVER_PORT = 30123;
 
 P2PMultiplayer::P2PMultiplayer(Context* context) :
     Sample(context),
@@ -377,7 +379,7 @@ void P2PMultiplayer::HandleUpdate(StringHash eventType, VariantMap& eventData)
 
 void P2PMultiplayer::Init() {
     GetSubsystem<Network>()->SetMode(NetworkMode::PEER_TO_PEER);
-    GetSubsystem<Network>()->SetNATServerInfo("nat.frameskippers.com", 30123);
+    GetSubsystem<Network>()->SetNATServerInfo(NAT_PUNCHTROUGH_SERVER, NAT_PUNCHTROUGH_SERVER_PORT);
     GetSubsystem<Network>()->SetUpdateFps(30);
 
     //httpRequest_ = GetSubsystem<Network>()->MakeHttpRequest("http://frameskippers.com:82/guid.txt");
